@@ -3,7 +3,7 @@ Kata-Skeleton.py
 
 This skeleton is inspired from [kata-skeleton.php](https://github.com/kevinlebrun/kata-skeleton.php) repository.  
 
-It provide a bootstrap to initialize a kata or a simple python project.  
+It provide a bootstrap for a kata or simply for a python project.  
 
 ## Requirements
 
@@ -18,7 +18,7 @@ First clone this repository
 Python virtualenv is used to manage your project dependencies.  
 
 You can edit `requirements.txt` file to add or remove dependencies for your project.
-This file is read by `pip` for installing packages.  
+This file is read by `pip` for packages installation.  
 
 To initialize kata project run:  
 ```make install```  
@@ -36,3 +36,7 @@ To clean virtual environment:
 
 To execute your tests:  
 ```make run-tests```  
+
+## License
+
+See COPYING file.
