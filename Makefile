@@ -17,7 +17,7 @@ NOSECMD = \
         --cover-html
 
 install: env
-	test -d $(KATA) || mkdir $(KATE)
+	test -d $(KATA) || mkdir $(KATA)
 	${PIP_INSTALL} --requirement requirements.txt
 
 clean-env:
