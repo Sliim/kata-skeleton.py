@@ -1,4 +1,4 @@
-NAME ?= kata
+KATA ?= kata
 ENV ?= env
 BINDIR ?= bin
 PYTHON ?= python
@@ -12,12 +12,12 @@ NOSECMD = \
     $(ENV)/$(BINDIR)/$(NOSE) \
         -w tests/ \
         --with-coverage
-        --cover-package=$(NAME) \
+        --cover-package=$(KATA) \
         --cover-erase \
         --cover-html
 
 install: env
-	test -d $(NAME) || mkdir $(NAME)
+	test -d $(KATA) || mkdir $(KATE)
 	${PIP_INSTALL} --requirement requirements.txt
 
 clean-env:
