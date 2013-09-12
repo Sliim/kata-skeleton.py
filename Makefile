@@ -10,7 +10,6 @@ VIRTUALENV = \
 NOSE = nosetests
 NOSECMD = \
     $(ENV)/$(BINDIR)/$(NOSE) \
-        -w tests/ \
         --with-coverage
         --cover-package=$(KATA) \
         --cover-erase \
