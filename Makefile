@@ -3,7 +3,7 @@ ENV ?= env
 BINDIR ?= bin
 PYTHON ?= python
 VIRTUALENV_SYSTEM_SITE_PACKAGES ?= true
-PIP_INSTALL = $(ENV)/$(BINDIR)/pip install --use-mirrors
+PIP_INSTALL = $(ENV)/$(BINDIR)/pip install --use-mirrors -I
 VIRTUALENV = \
     VIRTUALENV_SYSTEM_SITE_PACKAGES=$(VIRTUALENV_SYSTEM_SITE_PACKAGES) \
         virtualenv --python=$(PYTHON)
@@ -18,6 +18,7 @@ NOSECMD = \
 
 install: env
 	test -d $(KATA) || mkdir $(KATA)
+	touch $(KATA)/__init__.py
 	${PIP_INSTALL} --requirement requirements.txt
 
 clean-env:
